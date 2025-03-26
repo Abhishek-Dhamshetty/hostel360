@@ -1,0 +1,19 @@
+@import "tailwindcss";
+.animated-zero {
+    animation: scaleZero 1.5s infinite alternate;
+    display: inline-block;
+    font-weight: bold;
+  }
+  
+  @keyframes scaleZero {
+    0% {
+      transform: scale(1);  /* Normal size */
+    }
+    50% {
+      transform: scale(0.5);  /* Shrink */
+    }
+    100% {
+      transform: scale(1.5);  /* Enlarge */
+    }
+  }
+  
