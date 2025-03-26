@@ -20,7 +20,7 @@ userApp.post(
       console.log("Received Data:", req.body);
       const { email } = req.body;
 
-      if (!email) {
+      if (!email && email!='abhishekdhamshetty@gmail.com' && email!='bhargavdhamshetty@gmail.com') {
         return res.status(400).json({ message: "Email is required!" });
       }
 
