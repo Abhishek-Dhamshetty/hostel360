@@ -49,7 +49,7 @@ function RaiseComplaintPage() {
       };
       const token = await getToken();
       const response = await axios.post(
-        'http://localhost:9000/complaint-api/register',
+        `${import.meta.env.VITE_BACKEND_URL}/complaint-api/register`,
         complaintData,
         {
           headers: { Authorization: `Bearer ${token}` }, // ✅ Corrected token usage

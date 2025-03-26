@@ -11,7 +11,7 @@ function HostelLayout() {
 
   useEffect(() => {
     axios
-      .get(`http://localhost:9000/rooms-booking-api/all`)
+      .get(`${import.meta.env.VITE_BACKEND_URL}/rooms-booking-api/all`)
       .then((res) => setRooms(res.data.bookings || []))
       .catch((err) => console.error("❌ Error fetching rooms:", err));
   }, []);
@@ -37,7 +37,7 @@ function HostelLayout() {
 
     try {
       const response = await axios.post(
-        `http://localhost:9000/rooms-booking-api/book`,
+        `${import.meta.env.VITE_BACKEND_URL}/rooms-booking-api/book`,
         bookingData,
         { headers: { Authorization: `Bearer ${token}`, } }
       );

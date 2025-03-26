@@ -38,7 +38,7 @@ const PaymentForm = () => {
     };
 
     try {
-      const response = await axios.post("http://localhost:9000/payment-api/create", paymentData, {
+      const response = await axios.post(`${import.meta.env.VITE_BACKEND_URL}/payment-api/create`, paymentData, {
         headers: {
           Authorization: `Bearer ${token}`,
         },

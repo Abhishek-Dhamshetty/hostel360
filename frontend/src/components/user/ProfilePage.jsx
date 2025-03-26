@@ -31,7 +31,7 @@ function UserProfile() {
 
   const fetchUserDetails = async (userEmail) => {
     try {
-      const response = await axios.get(`http://localhost:9000/rooms-booking-api/my-bookings`, {
+      const response = await axios.get(`${import.meta.env.VITE_BACKEND_URL}/rooms-booking-api/my-bookings`, {
         params: { userEmail }
       });
       if (response.data) {
@@ -47,7 +47,7 @@ function UserProfile() {
 
   const fetchUserComplaints = async (userId) => {
     try {
-      const response = await axios.get(`http://localhost:9000/complaint-api/user/${userId}`);
+      const response = await axios.get(`${import.meta.env.VITE_BACKEND_URL}/complaint-api/user/${userId}`);
       if (response.data?.complaints?.length) {
         setUserDetails((prevDetails) => ({
           ...prevDetails,

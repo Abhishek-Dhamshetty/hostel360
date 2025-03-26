@@ -20,7 +20,7 @@ const Home = () => {
     const registerUser = async () => {
       try {
         const response = await axios.post(
-          "http://localhost:9000/user-api/register",
+          `${import.meta.env.VITE_BACKEND_URL}/user-api/register`,
           {
             email: user.primaryEmailAddress?.emailAddress, // Use optional chaining
             firstName: user.firstName,

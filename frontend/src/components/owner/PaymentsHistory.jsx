@@ -12,7 +12,7 @@ const PaymentsHistory = () => {
     const fetchPayments = async () => {
       try {
         const token = await getToken();
-        const response = await axios.get("http://localhost:9000/payment-api/all", {
+        const response = await axios.get(`${import.meta.env.VITE_BACKEND_URL}/payment-api/all`, {
           headers: {
             Authorization: `Bearer ${token}`,
           },

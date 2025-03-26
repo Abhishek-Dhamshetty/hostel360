@@ -10,7 +10,7 @@ function ComplaintsDashboard() {
   useEffect(() => {
     const fetchComplaints = async () => {
       try {
-        const response = await axios.get("http://localhost:9000/complaint-api/all");
+        const response = await axios.get(`${import.meta.env.VITE_BACKEND_URL}/complaint-api/all`);
         setComplaints(response.data.complaints);
       } catch (error) {
         setError("Failed to fetch complaints");
@@ -23,7 +23,7 @@ function ComplaintsDashboard() {
 
   const markResolved = async (id) => {
     try {
-      await axios.patch(`http://localhost:9000/complaint-api/update-status/${id}`, {
+      await axios.patch(`${import.meta.env.VITE_BACKEND_URL}/complaint-api/update-status/${id}`, {
         status: "resolved",
       });
       setComplaints((prevComplaints) =>
