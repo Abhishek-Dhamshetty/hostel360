@@ -13,10 +13,10 @@ function Header() {
   const { isSignedIn, user } = useUser();
   const navigate = useNavigate();
   const [isRegularUser, setIsRegularUser] = useState(false);
-
+  
   useEffect(() => {
     if (user) {
-      const email = user.emailAddresses?.[0]?.emailAddress; // Ensure `emailAddress` exists
+      const email = user.emailAddresses[0].emailAddress; // Ensure `emailAddress` exists
       if (email !== 'abhishekdhamshetty@gmail.com' && email !== 'bhargavdhamshetty@gmail.com') {
         setIsRegularUser(true);
       } else {
@@ -99,25 +99,25 @@ function Header() {
                   {user?.emailAddresses?.[0]?.emailAddress === 'abhishekdhamshetty@gmail.com' && (
                     <>
                     <NavLink 
-                      to={`admin-profile/${user.emailAddresses[0].emailAddress}/`} 
+                      to={`/admin-profile/${user.emailAddresses[0].emailAddress}/`} 
                       className={`nav-btn ${location.pathname === `/admin-profile/${user.emailAddresses[0].emailAddress}/` ? 'active-btn' : ''}`}
                     >
                       Profile
                     </NavLink>
                     <NavLink 
-                      to={`admin-profile/${user.emailAddresses[0].emailAddress}/employees-list`} 
+                      to={`/admin-profile/${user.emailAddresses[0].emailAddress}/employees-list`} 
                       className={`nav-btn ${location.pathname === `/admin-profile/${user.emailAddresses[0].emailAddress}/employees-list` ? 'active-btn' : ''}`}
                     >
                       Employees List
                     </NavLink>
                     <NavLink 
-                      to={`admin-profile/${user.emailAddresses[0].emailAddress}/payments`} 
+                      to={`/admin-profile/${user.emailAddresses[0].emailAddress}/payments`} 
                       className={`nav-btn ${location.pathname === `/admin-profile/${user.emailAddresses[0].emailAddress}/payments` ? 'active-btn' : ''}`}
                     >
                       Transaction History
                     </NavLink>
                     <NavLink 
-                      to={`admin-profile/${user.emailAddresses[0].emailAddress}/users-list`} 
+                      to={`/admin-profile/${user.emailAddresses[0].emailAddress}/users-list`} 
                       className={`nav-btn ${location.pathname === `/admin-profile/${user.emailAddresses[0].emailAddress}/users-list` ? 'active-btn' : ''}`}
                     >
                       Hostelers List
@@ -127,13 +127,13 @@ function Header() {
                   {user?.emailAddresses?.[0]?.emailAddress === 'bhargavdhamshetty@gmail.com' && (
                     <>
                     <NavLink 
-                      to={`warden-profile/${user.emailAddresses[0].emailAddress}/`} 
+                      to={`/warden-profile/${user.emailAddresses[0].emailAddress}/`} 
                       className={`nav-btn ${location.pathname === `/warden-profile/${user.emailAddresses[0].emailAddress}/` ? 'active-btn' : ''}`}
                     >
                       Profile
                     </NavLink>
                     <NavLink 
-                      to={`warden-profile/${user.emailAddresses[0].emailAddress}/resolve-complaints`} 
+                      to={`/warden-profile/${user.emailAddresses[0].emailAddress}/resolve-complaints`} 
                       className={`nav-btn ${location.pathname === `/warden-profile/${user.emailAddresses[0].emailAddress}/resolve-complaints` ? 'active-btn' : ''}`}
                     >
                       Complaints
@@ -143,19 +143,19 @@ function Header() {
                   {isRegularUser && (
                     <>
                     <NavLink 
-                      to={`user-profile/${user.emailAddresses[0].emailAddress}/`} 
+                      to={`/user-profile/${user.emailAddresses[0].emailAddress}/`} 
                       className={`nav-btn ${location.pathname === `/user-profile/${user.emailAddresses[0].emailAddress}/` ? 'active-btn' : ''}`}
                     >
                       Profile
                     </NavLink>
                     <NavLink 
-                      to={`user-profile/${user.emailAddresses[0].emailAddress}/payment-page`} 
+                      to={`/user-profile/${user.emailAddresses[0].emailAddress}/payment-page`} 
                       className={`nav-btn ${location.pathname === `/user-profile/${user.emailAddresses[0].emailAddress}/payment-page` ? 'active-btn' : ''}`}
                     >
                       Payment Page
                     </NavLink>
                     <NavLink 
-                      to={`user-profile/${user.emailAddresses[0].emailAddress}/raise-complaint`} 
+                      to={`/user-profile/${user.emailAddresses[0].emailAddress}/raise-complaint`} 
                       className={`nav-btn ${location.pathname === `/user-profile/${user.emailAddresses[0].emailAddress}/raise-complaint` ? 'active-btn' : ''}`}
                     >
                       Raise Complaint
