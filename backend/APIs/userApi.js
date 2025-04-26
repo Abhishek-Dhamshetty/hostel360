@@ -7,7 +7,7 @@ const requireAuth = require("../middleware/clerkAuth"); // Ensure correct export
 const userApp = express.Router();
 
 // ✅ Enable CORS
-userApp.use(cors({ origin: "https://hostel360-kappa.vercel.app" , credentials: true }));
+userApp.use(cors({ origin: ["https://hostel360-kappa.vercel.app","http://localhost:5173"] , credentials: true }));
 
 // ✅ Middleware to Parse JSON
 userApp.use(express.json());
