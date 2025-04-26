@@ -1,136 +1,187 @@
-Hostel360
-A full-stack PG & Hostel Management System that enables users to browse available hostels, book rooms, and manage hostel amenities efficiently. The platform offers secure user authentication, an intuitive dashboard, real-time booking updates, and seamless online payments through Razorpay.
+# Hostel360
 
-🚀 Features
-✨ Frontend
-User Authentication
+A full-stack **PG & Hostel Management System** that enables users to browse available hostels, book rooms, and manage hostel amenities efficiently. The platform offers secure user authentication, an intuitive dashboard, real-time booking updates, and seamless online payments through Razorpay.
 
-Secure registration and login system.
+---
 
-Admin authentication with restricted access to manage hostels, rooms, and bookings.
+## 🚀 Features
 
-Hostel Dashboard
+### ✨ Frontend
+- **User Authentication**
+  - Secure registration and login system.
+  - Admin authentication with restricted access to manage hostels, rooms, and bookings.
 
-Displays a list of available PGs/Hostels with powerful search and filter options.
+- **Hostel Dashboard**
+  - Displays a list of available PGs/Hostels with powerful search and filter options.
+  - Detailed room view showcasing amenities, pricing, and photos.
 
-Detailed room view showcasing amenities, pricing, and photos.
+- **Booking Management**
+  - Users can select rooms and complete bookings online.
+  - Integrated **Razorpay** payment gateway for secure and smooth transactions.
 
-Booking Management
+- **Admin Features**
+  - Admins can approve/reject hostel listing requests submitted by owners.
+  - View and manage all hostels, rooms, and bookings from a single dashboard.
 
-Users can select rooms and complete bookings online.
+- **Responsive Design**
+  - Fully optimized for desktops, tablets, and mobile devices.
 
-Integrated Razorpay payment gateway for secure and smooth transactions.
+---
 
-Admin Features
+### ⚙️ Backend
+- **Authentication API**
+  - Secure token-based authentication.
+  - Role-based access control for users and admins.
 
-Admins can approve/reject hostel listing requests submitted by owners.
+- **Hostel & Room Management API**
+  - CRUD operations for hostels, rooms, users, and bookings.
 
-View and manage all hostels, rooms, and bookings from a single dashboard.
+- **Real-Time Updates**
+  - WebSocket (optional) support for live booking status updates.
 
-Responsive Design
+- **Payment Integration**
+  - Razorpay checkout integrated for fast, secure online payments.
 
-Fully optimized for desktops, tablets, and mobile devices.
+---
 
-⚙️ Backend
-Authentication API
+### 🛢️ Database
+- **MongoDB Atlas** — Cloud database storage with high scalability and reliability.
 
-Secure token-based authentication.
+---
 
-Role-based access control for users and admins.
+## 🖥️ Tech Stack
 
-Hostel & Room Management API
+| Technology | Description |
+|:-----------|:------------|
+| **Frontend** | React.js, Tailwind CSS, Axios |
+| **Backend** | Node.js, Express.js |
+| **Database** | MongoDB Atlas |
+| **Hosting** | Vercel (Frontend), Render (Backend) |
+| **Payments** | Razorpay Integration |
+| **Authentication** | JWT (JSON Web Tokens) |
 
-CRUD operations for hostels, rooms, users, and bookings.
+---
 
-Real-Time Updates
+## 🚀 Deployment
 
-WebSocket (optional) support for live booking status updates.
+### 🌐 Live Application
+- [Frontend (Vercel)](https://hostel360-kappa.vercel.app/)
 
-Payment Integration
+### ☁️ Hosting
+- **Frontend** — Deployed on **Vercel**.
+- **Backend** — Deployed on **Render**.
+- **Database** — Managed with **MongoDB Atlas** (Free Tier).
 
-Razorpay checkout integrated for fast, secure online payments.
+---
 
-🛢️ Database
-MongoDB Atlas — Cloud database storage with high scalability and reliability.
+## 🛠️ Setup Instructions (Run Locally)
 
-🖥️ Tech Stack
+### 📋 Prerequisites
+- Node.js installed
+- MongoDB Atlas account (or local MongoDB)
 
-Technology	Description
-Frontend	React.js, Tailwind CSS, Axios
-Backend	Node.js, Express.js
-Database	MongoDB Atlas
-Hosting	Vercel (Frontend), Render (Backend)
-Payments	Razorpay Integration
-Authentication	JWT (JSON Web Tokens)
-🚀 Deployment
-🌐 Live Application
-Frontend (Vercel)
+---
 
-☁️ Hosting
-Frontend — Deployed on Vercel.
+### 🔥 Steps to Setup
 
-Backend — Deployed on Render.
+1. **Clone the Repository:**
+   ```bash
+   git clone https://github.com/Abhishek-Dhamshetty/hostel360.git
+   cd hostel360
+   ```
 
-Database — Managed with MongoDB Atlas (Free Tier).
+2. **Install Dependencies:**
+   ```bash
+   npm install
+   ```
 
-🛠️ Setup Instructions (Run Locally)
-📋 Prerequisites
-Node.js installed
+3. **Environment Variables Setup:**
+   - Create a `.env` file in the root directory.
+   - Add the following environment variables:
+   ```env
+   MONGODB_URI=your_mongodb_connection_string
+   JWT_SECRET=your_jwt_secret_key
+   RAZORPAY_KEY_ID=your_razorpay_key_id
+   RAZORPAY_KEY_SECRET=your_razorpay_key_secret
+   ```
 
-MongoDB Atlas account (or local MongoDB)
+4. **Start the Development Server:**
+   ```bash
+   npm start
+   ```
 
-🔥 Steps to Setup
-Clone the Repository:
+5. **Access the Application:**
+   - Frontend: [https://hostel360-kappa.vercel.app/](https://hostel360-kappa.vercel.app/)
+   - Backend: Deployed on Render.
 
-bash
-Copy
-Edit
-git clone https://github.com/Abhishek-Dhamshetty/hostel360.git
-cd hostel360
-Install Dependencies:
+---
 
-bash
-Copy
-Edit
-npm install
-Environment Variables:
+### 🚀 Features
 
-Create a .env file in the root directory.
+- **User Authentication:** Secure login and registration.
+- **Admin Panel:** Manage hostels, rooms, and user bookings.
+- **Hostel Listings:** Search, view details, and filter hostels.
+- **Booking System:** Book rooms with real-time availability check.
+- **Online Payment Integration:** Seamless Razorpay checkout flow.
+- **Responsive Design:** Optimized for mobile, tablet, and desktop.
+- **Real-time Updates:** Live booking status using WebSockets.
 
-Add the following environment variables:
+---
 
-ini
-Copy
-Edit
-MONGODB_URI=your_mongodb_connection_string
-JWT_SECRET=your_jwt_secret_key
-RAZORPAY_KEY_ID=your_razorpay_key_id
-RAZORPAY_KEY_SECRET=your_razorpay_key_secret
-Start the Development Server:
+### 💳 Razorpay Payment Integration
 
-bash
-Copy
-Edit
-npm start
-Access the Application:
+- Users can securely make payments for hostel bookings.
+- Integrated Razorpay Checkout with proper success and failure handling.
+- Payments are logged and bookings are confirmed upon successful payment.
 
-Open your browser and go to: http://localhost:3000/
+---
 
-Or visit the live site: https://hostel360-kappa.vercel.app/
+### 🏗 Tech Stack
 
-📜 License
-This project is licensed under the MIT License — feel free to use and customize it!
+- **Frontend:** React.js, Tailwind CSS, Bootstrap
+- **Backend:** Node.js, Express.js
+- **Database:** MongoDB Atlas
+- **Authentication:** JWT (JSON Web Tokens)
+- **Hosting:** Vercel (Frontend), Render (Backend)
 
+---
+
+### 📂 Folder Structure
+
+```
+/hostel360
+  ├── /client  (Frontend Code)
+  ├── /server  (Backend Code)
+  ├── README.md
+  └── package.json
+```
+
+---
+
+### 🛠 Future Enhancements
+
+- Implement Admin Dashboard for Payment Tracking.
+- Add User Reviews & Ratings for Hostels.
+- Multi-city Hostel Listings.
+- Enhanced UI/UX with animations and transitions.
+
+---
 Built with ❤️ by Abhishek Dhamshetty
 
-🎯 Improvements added in this final version:
-✔️ Razorpay payment flow integration
+Built with ❤️ by Bhargav Dhamshetty
 
-✔️ Admin can approve hostel listings
+### 🤝 Contribution
 
-✔️ Final optimized, professional README
+Contributions are always welcome!  
+Feel free to fork the repo, make changes, and raise a pull request.
 
-✔️ Environment variable details for easy setup
+---
 
-✔️ Tech Stack table for clarity
+### 📞 Contact
 
+For any queries or collaboration:
+- **Abhishek Dhamshetty**
+- GitHub: [@Abhishek-Dhamshetty](https://github.com/Abhishek-Dhamshetty)
+- Email: abhishekdhamshetty@gmail.com
+
+---
